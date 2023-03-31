@@ -6,7 +6,7 @@ import FeedbackForm from './components/FeedbackForm'
 import AboutIconLink from './components/AboutIconLink'
 import AboutPage from './pages/AboutPage'
 import { FeedbackProvider } from './context/FeedbackContext'
-
+import WelcomePage from './pages/WelcomePage'
 function App() {
   return (
     <FeedbackProvider>
@@ -18,9 +18,10 @@ function App() {
               path='/'
               element={
                 <>
-                  <FeedbackForm />
+                <WelcomePage />
+                  {/* <FeedbackForm />
                   <FeedbackStats />
-                  <FeedbackList />
+                  <FeedbackList /> */}
                 </>
               }
             ></Route>
