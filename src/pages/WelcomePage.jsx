@@ -1,13 +1,22 @@
-import { Link } from 'react-router-dom'
+import { Link, Routes, Route, useNavigate } from 'react-router-dom'
 import Card from '../components/shared/Card'
+import Greetings from './Greetings';
 
 function WelcomePage(props) {
+    const navigate = useNavigate();
+
+    const navigateToScreen = ()=>{
+        navigate('Greetings')
+    }
   return (
     
       <div className='about'>
         <h1>Welcome To Feedback</h1>
-        <p></p>
-        <button style={{width:100, height:25, color:'red'}}>Start Feedback</button>
+        
+        <button onClick={navigateToScreen} style={{width:"30%", height:50,alignItems:'center', color:'red'}}>Start Feedback</button>
+        <Routes>
+         
+        </Routes>
         <p>
           <Link to='/'>Back To Home</Link>
         </p>
